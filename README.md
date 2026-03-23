@@ -31,14 +31,22 @@ In your Pages project **Settings → Builds**:
 
 **Do not** use `npx @cloudflare/next-on-pages` for this repo unless you migrate to the OpenNext adapter. The site uses `output: "export"` (static HTML). Running `next-on-pages` from the repo root fails because there is no `package.json` with Next at the root.
 
-The root `wrangler.toml` sets `pages_build_output_dir` and the build command so Cloudflare Pages can auto-detect settings when valid.
+The root **`wrangler.toml`** is **Pages-only** (`name` + `pages_build_output_dir`). Cloudflare Pages does **not** allow `[build]` or `[assets]` in that file.
+
+Set the **build command** in the Pages dashboard to `npm run build` (see above) — it is **not** read from `wrangler.toml` on Pages.
 
 ## Manual deploy (Workers + static assets)
 
-From the repo root:
+From the repo root (uses **`wrangler.worker.toml`**, not `wrangler.toml`):
 
 ```bash
-npx wrangler deploy
+npm run deploy:worker
+```
+
+or:
+
+```bash
+npx wrangler deploy --config wrangler.worker.toml
 ```
 
 This runs the `[build]` command and uploads `nextjs-site/out` as static assets.

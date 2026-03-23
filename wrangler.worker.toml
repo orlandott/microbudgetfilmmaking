@@ -1,0 +1,11 @@
+# Workers Static Assets — manual deploy from your machine:
+#   npx wrangler deploy --config wrangler.worker.toml
+
+name = "microbudgetfilmmaking"
+compatibility_date = "2026-03-23"
+
+[build]
+command = "npm ci --prefix nextjs-site && npm run build --prefix nextjs-site"
+
+[assets]
+directory = "nextjs-site/out"

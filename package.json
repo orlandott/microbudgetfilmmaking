@@ -2,6 +2,7 @@
   "name": "microbudgetfilmmaking",
   "private": true,
   "scripts": {
-    "build": "npm ci --prefix nextjs-site && npm run build --prefix nextjs-site"
+    "build": "npm ci --prefix nextjs-site && npm run build --prefix nextjs-site",
+    "deploy:worker": "wrangler deploy --config wrangler.worker.toml"
   }
 }
