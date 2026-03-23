@@ -1,22 +1,22 @@
 import type { Metadata } from "next";
-import { Lora, Raleway } from "next/font/google";
+import { DM_Sans, Oswald } from "next/font/google";
 import "./globals.css";
 
-const raleway = Raleway({
-  variable: "--font-raleway",
+const oswald = Oswald({
+  variable: "--font-display",
   subsets: ["latin"],
   weight: ["400", "500", "600", "700"],
 });
 
-const lora = Lora({
-  variable: "--font-lora",
+const dmSans = DM_Sans({
+  variable: "--font-sans",
   subsets: ["latin"],
   weight: ["400", "500", "600", "700"],
 });
 
 export const metadata: Metadata = {
-  title: "Border Radius Rebuild",
-  description: "Next.js reproduction of the Border Radius theme",
+  title: "Microbudget Filmmaking",
+  description: "Writer, director, and producer helping you tell your story on a microbudget.",
 };
 
 export default function RootLayout({
@@ -25,7 +25,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${raleway.variable} ${lora.variable} h-full antialiased`}>
+    <html lang="en" className={`${oswald.variable} ${dmSans.variable} h-full antialiased`}>
       <body className="min-h-full flex flex-col">{children}</body>
     </html>
   );
