@@ -12,6 +12,14 @@ In your Pages project **Settings → Builds**:
 2. **Build command** (must build the app that contains `next` — **not** `next-on-pages` at repo root):
 
    ```bash
+   npm run build
+   ```
+
+   (Root `package.json` runs `npm ci` + `next build` inside `nextjs-site/`.)
+
+   Or the equivalent one-liner:
+
+   ```bash
    npm ci --prefix nextjs-site && npm run build --prefix nextjs-site
    ```
 
@@ -34,3 +42,7 @@ npx wrangler deploy
 ```
 
 This runs the `[build]` command and uploads `nextjs-site/out` as static assets.
+
+## Cloudflare “internal error” after clone
+
+If the build log shows **Failed: an internal error occurred** right after cloning (before any build step), that is a **Cloudflare platform issue**, not your code. **Retry the deployment** or use [Cloudflare support](https://cfl.re/3WgEyrH). Your commit and repo are fine if the clone step shows the correct `HEAD`.
