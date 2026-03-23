@@ -210,6 +210,12 @@ body {
   font-weight: 600;
 }
 
+.styled-hr {
+  border: 0;
+  border-top: 1px solid var(--line);
+  margin: 1.4rem 0;
+}
+
 .image-placeholder {
   display: inline-block;
   border: 1px dashed var(--line);
@@ -251,6 +257,35 @@ body {
 .subscribe-form button {
   border: 0;
   cursor: pointer;
+}
+
+.service-list {
+  margin-top: 1rem;
+  display: grid;
+  gap: 0.9rem;
+}
+
+.service-item {
+  border: 1px solid var(--line);
+  background: #fbfcfd;
+  padding: 0.95rem;
+}
+
+.service-item h4 {
+  margin-top: 0;
+}
+
+.service-price {
+  color: var(--emphasized);
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.service-link {
+  display: inline-block;
+  font-size: 0.82rem;
+  letter-spacing: 0.05em;
+  font-weight: 700;
 }
 
 #footer {
