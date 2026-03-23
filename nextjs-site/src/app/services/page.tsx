@@ -1,4 +1,28 @@
+import Link from "next/link";
 import SiteShell from "@/components/SiteShell";
+
+const serviceLinks = [
+  {
+    href: "/services/writing",
+    title: "Writing",
+    blurb: "Get your story on paper — feature, TV pilot, or short — with a clear process tailored to your budget.",
+  },
+  {
+    href: "/services/script-consulting",
+    title: "Script consulting",
+    blurb: "Written notes, a video call, and ideas to strengthen your script and reduce production cost.",
+  },
+  {
+    href: "/services/microbudget-production",
+    title: "Microbudget production",
+    blurb: "Placeholder — details coming soon.",
+  },
+  {
+    href: "/services/script-doctoring",
+    title: "Script doctoring",
+    blurb: "Placeholder — details coming soon.",
+  },
+] as const;
 
 export default function ServicesPage() {
   return (
@@ -23,115 +47,15 @@ export default function ServicesPage() {
           like anything, when you don&apos;t use your creativity, it atrophies with time.
         </p>
 
-        <h3>Writing scripts</h3>
-        <p>
-          Useful for: people who want to make a film, don&apos;t have a script, and are not
-          interested in writing.
-        </p>
-        <p>
-          I can help you get your story out on paper, whether it&apos;s a feature film, a TV pilot,
-          or a short film.
-        </p>
-        <p>
-          Maybe you know exactly how you want your story to end, your philosophical argument, your
-          theme, and your characters.
-        </p>
-        <p>
-          Maybe you don&apos;t know anything concrete and you just have a cool image in your head.
-          Or a message you need to share.
-        </p>
-        <p>
-          I can help tease out what&apos;s important to you, and help you tell the story that you
-          want to tell.
-        </p>
-
-        <hr className="styled-hr" />
-        <p>Here&apos;s how the process works:</p>
-        <p>
-          We can start with an idea or an outline. You tell me what your budget is, so I can write
-          with that in mind.
-        </p>
-        <ol>
-          <li>
-            First, we&apos;ll have a video call. Here we&apos;ll talk about your central theme, your
-            characters, and the tone you&apos;re going for.
-          </li>
-          <li>I will write an outline, and send it to you for feedback.</li>
-          <li>
-            I will edit the outline, based on your feedback, and send it to you. Once we&apos;re
-            happy with the outline, I&apos;ll move to writing.
-          </li>
-          <li>I will send you the first draft for feedback.</li>
-          <li>
-            I will edit the first draft, based on your feedback and send it back to you for more
-            feedback.
-          </li>
-          <li>We keep going until you are happy with the finished product.</li>
-        </ol>
-        <p>Contact me for personalized pricing for writing.</p>
-        <p>
-          My prices are very affordable, because I want credits and experience more than money, and
-          I have other sources of income.
-        </p>
-        <p>
-          P.S. - If you want to shoot the finished script yourself, you can hire me for Microbudget
-          Production.
-        </p>
-
-        <h3>Script consulting</h3>
-        <p>Useful for: people who have a script, and want feedback to make it better.</p>
-        <p>
-          I can help you identify the best parts of your script, and what you can do to improve it.
-        </p>
-        <p>
-          All the options below include me reading your script, giving you written notes, and then
-          having a videocall to explain my notes and take questions from you.
-        </p>
-        <p>
-          This also includes identifying how to reduce the costs of your screenplay - cutting
-          characters, locations, and props, to focus on what&apos;s most important to you.
-        </p>
-
-        <div className="service-list">
-          <article className="service-item">
-            <h4>Full Script Consultation (Feature film - up to 130 pages)</h4>
-            <p className="service-price">$100.00</p>
-            <a href="#" className="service-link">
-              LEARN MORE
-            </a>
-          </article>
-
-          <article className="service-item">
-            <h4>Outline Analysis (up to 5 pages)</h4>
-            <p className="service-price">$40.00</p>
-            <a href="#" className="service-link">
-              LEARN MORE
-            </a>
-          </article>
-
-          <article className="service-item">
-            <h4>Full Script Consultation (Short film - up to 20 pages)</h4>
-            <p className="service-price">$40.00</p>
-            <a href="#" className="service-link">
-              LEARN MORE
-            </a>
-          </article>
-
-          <article className="service-item">
-            <h4>Full Script Consultation (TV pilot - up to 60 pages)</h4>
-            <p className="service-price">$60.00</p>
-            <a href="#" className="service-link">
-              LEARN MORE
-            </a>
-          </article>
-
-          <article className="service-item">
-            <h4>Full Script Consultation (TV pilot - up to 30 pages)</h4>
-            <p className="service-price">$50.00</p>
-            <a href="#" className="service-link">
-              LEARN MORE
-            </a>
-          </article>
+        <h2 className="services-hub-heading">Explore services</h2>
+        <div className="service-hub-grid">
+          {serviceLinks.map((item) => (
+            <Link key={item.href} href={item.href} className="service-hub-card">
+              <h3>{item.title}</h3>
+              <p>{item.blurb}</p>
+              <span className="service-hub-cta">View details →</span>
+            </Link>
+          ))}
         </div>
       </section>
     </SiteShell>
