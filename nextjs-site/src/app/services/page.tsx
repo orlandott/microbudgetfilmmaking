@@ -15,7 +15,8 @@ const serviceLinks = [
   {
     href: "/services/microbudget-production",
     title: "Microbudget production",
-    blurb: "Placeholder — details coming soon.",
+    blurb:
+      "Pre-production planning and budget-smart ways to get your script shot for the least amount of money.",
   },
   {
     href: "/services/script-doctoring",
