@@ -1,5 +1,8 @@
+# Workers Static Assets (`wrangler deploy`) + Cloudflare Pages (Git) both read this file.
+# Pages requires `pages_build_output_dir` or it ignores the file and falls back to broken defaults.
 name = "microbudgetfilmmaking"
 compatibility_date = "2026-03-23"
+pages_build_output_dir = "nextjs-site/out"
 
 [build]
 command = "npm ci --prefix nextjs-site && npm run build --prefix nextjs-site"
