@@ -12,7 +12,9 @@ export default function ScriptConsultingPage() {
         </p>
 
         <h3>Script consulting</h3>
-        <p>Useful for: people who have a script, and want feedback to make it better.</p>
+        <p>
+          Useful for: people who have a script, and want feedback to make it better.
+        </p>
         <p>
           I can help you identify the best parts of your script, and what you can do to improve it.
         </p>
@@ -24,6 +26,8 @@ export default function ScriptConsultingPage() {
           This also includes identifying how to reduce the costs of your screenplay - cutting
           characters, locations, and props, to focus on what&apos;s most important to you.
         </p>
+
+        <hr className="styled-hr" />
 
         <div className="service-list">
           <article className="service-item">
