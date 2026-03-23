@@ -21,7 +21,8 @@ const serviceLinks = [
   {
     href: "/services/script-doctoring",
     title: "Script doctoring",
-    blurb: "Placeholder — details coming soon.",
+    blurb:
+      "Hands-on rewrites — clarity, dialogue, structure, and professional formatting — with a clear feedback loop.",
   },
 ] as const;
 
