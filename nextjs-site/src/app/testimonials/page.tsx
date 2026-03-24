@@ -74,7 +74,15 @@ export default function TestimonialsPage() {
           professionalism, and his dedication.&quot;
         </p>
         <p className="testimonial-author">- Frankie R.</p>
-        <p className="image-placeholder">Picture</p>
+        <figure className="testimonial-avatar-wrap">
+          <Image
+            src="/images/testimonials/frankie-r.png"
+            alt="Frankie R."
+            width={256}
+            height={256}
+            className="testimonial-avatar"
+          />
+        </figure>
 
         <p>
           &quot;Orlando served as a proofreader, editor, sensitivity reader, and commentator for a play
