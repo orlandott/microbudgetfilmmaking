@@ -1,3 +1,4 @@
+import Image from "next/image";
 import SiteShell from "@/components/SiteShell";
 
 export default function TestimonialsPage() {
@@ -57,7 +58,15 @@ export default function TestimonialsPage() {
           it transforms from good to great.&quot;
         </p>
         <p className="testimonial-author">- Josh F.</p>
-        <p className="image-placeholder">Picture</p>
+        <figure className="testimonial-avatar-wrap">
+          <Image
+            src="/images/testimonials/josh-f.png"
+            alt="Josh F."
+            width={256}
+            height={256}
+            className="testimonial-avatar"
+          />
+        </figure>
 
         <p>
           &quot;I had the immense pleasure of working with Orlando. One of his strengths is the fact
