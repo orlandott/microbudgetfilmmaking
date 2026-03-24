@@ -73,7 +73,7 @@ export default function AboutPage() {
             </p>
             <p>
               Here&apos;s my{" "}
-              <ExtLink href="https://www.imdb.com/find/?q=Orlando+Torres&ref_=nv_sr_sm">
+              <ExtLink href="https://www.imdb.com/name/nm16935599/">
                 IMDb page
               </ExtLink>
               .

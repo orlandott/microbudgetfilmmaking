@@ -38,6 +38,8 @@ export default function SiteShell({
 }: SiteShellProps) {
   const [mobileOpen, setMobileOpen] = useState(false);
   const pathname = usePathname();
+  const contentCentered =
+    pathname !== "/about" && pathname !== "/testimonials";
 
   return (
     <div className={`site-shell ${mobileOpen ? "menu-open" : ""}`}>
@@ -104,7 +106,12 @@ export default function SiteShell({
               </div>
             </section>
 
-            <div id="content-wrapper">{children}</div>
+            <div
+              id="content-wrapper"
+              className={contentCentered ? "content-centered" : undefined}
+            >
+              {children}
+            </div>
           </div>
 
           <footer id="footer">
