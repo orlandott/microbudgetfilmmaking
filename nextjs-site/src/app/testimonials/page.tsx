@@ -37,7 +37,15 @@ export default function TestimonialsPage() {
           production-related project.&quot;
         </p>
         <p className="testimonial-author">- Gabrielle B.</p>
-        <p className="image-placeholder">Picture</p>
+        <figure className="testimonial-avatar-wrap">
+          <Image
+            src="/images/testimonials/gabrielle-b.png"
+            alt="Gabrielle B."
+            width={256}
+            height={256}
+            className="testimonial-avatar"
+          />
+        </figure>
 
         <p>
           &quot;Orlando is a very passionate and dedicated person about everything he puts his mind to.
