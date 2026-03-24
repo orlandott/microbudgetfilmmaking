@@ -1,4 +1,5 @@
 import Link from "next/link";
+import ServicePhoto from "@/components/ServicePhoto";
 import SiteShell from "@/components/SiteShell";
 
 export default function WritingPage() {
@@ -10,6 +11,12 @@ export default function WritingPage() {
           <span aria-hidden="true"> / </span>
           <span>Writing</span>
         </p>
+
+        <ServicePhoto
+          src="/images/services/writing-outline.png"
+          alt="Story structure index cards on a wooden table, ACT 2 in focus"
+          priority
+        />
 
         <h3>Writing scripts</h3>
         <p>

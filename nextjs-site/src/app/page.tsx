@@ -1,3 +1,4 @@
+import ServicePhoto from "@/components/ServicePhoto";
 import SiteShell from "@/components/SiteShell";
 
 export default function Home() {
@@ -7,7 +8,11 @@ export default function Home() {
       heroButtonText="What story do you want to tell?"
     >
       <section className="container">
-        <p className="image-placeholder">Picture</p>
+        <ServicePhoto
+          src="/images/services/services-overview.png"
+          alt="Screenplay on a desk — your story, ready to be told"
+          priority
+        />
         <h2>What story do you want to tell?</h2>
         <p>
           Filmmaking is about sharing stories that need to come out of your subconscious, stories

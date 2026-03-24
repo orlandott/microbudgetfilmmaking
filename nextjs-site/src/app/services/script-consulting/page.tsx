@@ -1,4 +1,5 @@
 import Link from "next/link";
+import ServicePhoto from "@/components/ServicePhoto";
 import SiteShell from "@/components/SiteShell";
 
 export default function ScriptConsultingPage() {
@@ -10,6 +11,12 @@ export default function ScriptConsultingPage() {
           <span aria-hidden="true"> / </span>
           <span>Script consulting</span>
         </p>
+
+        <ServicePhoto
+          src="/images/services/script-consulting.png"
+          alt="Reading a screenplay at a desk with books and a vintage typewriter"
+          priority
+        />
 
         <h3>Script consulting</h3>
         <p>

@@ -1,4 +1,5 @@
 import Link from "next/link";
+import ServicePhoto from "@/components/ServicePhoto";
 import SiteShell from "@/components/SiteShell";
 
 export default function ScriptDoctoringPage() {
@@ -13,6 +14,12 @@ export default function ScriptDoctoringPage() {
           <span aria-hidden="true"> / </span>
           <span>Script doctoring</span>
         </p>
+
+        <ServicePhoto
+          src="/images/services/script-doctoring-pen.png"
+          alt="Editing notes by hand with a red pen in a notebook"
+          priority
+        />
 
         <h3>Script doctoring</h3>
         <p>
@@ -32,6 +39,11 @@ export default function ScriptDoctoringPage() {
           Once we&apos;ve decided on a course of action, I will rewrite, and get your feedback,
           until we&apos;re both satisfied with the final product.
         </p>
+
+        <ServicePhoto
+          src="/images/services/script-doctoring-screen.png"
+          alt="Screenplay open on a laptop — rewriting and formatting in progress"
+        />
 
         <p>Contact me for personalized pricing on rewriting.</p>
         <p>

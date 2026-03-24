@@ -1,4 +1,5 @@
 import Link from "next/link";
+import ServicePhoto from "@/components/ServicePhoto";
 import SiteShell from "@/components/SiteShell";
 
 export default function MicrobudgetProductionPage() {
@@ -13,6 +14,12 @@ export default function MicrobudgetProductionPage() {
           <span aria-hidden="true"> / </span>
           <span>Microbudget production</span>
         </p>
+
+        <ServicePhoto
+          src="/images/services/microbudget-production.png"
+          alt="Microbudget film crew on location filming a scene"
+          priority
+        />
 
         <h3>Microbudget production</h3>
         <p>
