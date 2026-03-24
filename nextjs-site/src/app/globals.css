@@ -339,6 +339,39 @@ body {
   object-fit: cover;
 }
 
+.service-photo-wrap--portrait {
+  aspect-ratio: 3 / 4;
+  max-width: min(100%, 400px);
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.about-intro {
+  display: grid;
+  gap: 2rem;
+  align-items: start;
+  margin-bottom: 0.5rem;
+}
+
+@media (min-width: 768px) {
+  .about-intro {
+    grid-template-columns: 1fr minmax(260px, 380px);
+  }
+
+  .about-intro-media {
+    order: 2;
+  }
+
+  .about-intro-copy {
+    order: 1;
+  }
+
+  .about-intro-media .service-photo-wrap--portrait {
+    margin-right: 0;
+    margin-left: auto;
+  }
+}
+
 .service-hub-card-thumb {
   margin: -1.35rem -1.2rem 1rem;
   border-radius: 4px 4px 0 0;

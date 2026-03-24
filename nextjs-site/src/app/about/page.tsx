@@ -1,3 +1,4 @@
+import ServicePhoto from "@/components/ServicePhoto";
 import SiteShell from "@/components/SiteShell";
 
 export default function AboutPage() {
@@ -5,38 +6,50 @@ export default function AboutPage() {
     <SiteShell heroTitle="About" heroSubtitle="About me and my film education.">
       <section className="container">
         <h3>About me</h3>
-        <p>
-          I&apos;ve spent the last 5 years learning how to write, produce, and direct microbudget
-          short films.
-        </p>
-        <p>
-          When I started my film education, I was writing big-budget feature films that I thought
-          could get sold in Hollywood.
-        </p>
-        <p>
-          After a few years, I realized I had to stop waiting for funders to give me millions - I
-          had to take things into my own hands.
-        </p>
-        <p>
-          This is when I discovered microbudget filmmaking. I learned how to write with a
-          producer&apos;s hat on, so I know I&apos;m only writing things that I can afford to make
-          myself.
-        </p>
-        <p>
-          I started A Short A Month Productions with a group of filmmakers, and we&apos;ve been
-          creating films and learning together.
-        </p>
-        <p>
-          Now I offer my services so you don&apos;t have to spend years, and you don&apos;t have to
-          make the mistakes I made along the way.
-        </p>
-        <p>
-          The best way to learn is by doing, and I can show you how to start making films, so you
-          can learn by doing, quickly.
-        </p>
-        <p>
-          Here&apos;s my <a href="#">IMDb page</a>.
-        </p>
+        <div className="about-intro">
+          <div className="about-intro-copy">
+            <p>
+              I&apos;ve spent the last 5 years learning how to write, produce, and direct
+              microbudget short films.
+            </p>
+            <p>
+              When I started my film education, I was writing big-budget feature films that I
+              thought could get sold in Hollywood.
+            </p>
+            <p>
+              After a few years, I realized I had to stop waiting for funders to give me millions -
+              I had to take things into my own hands.
+            </p>
+            <p>
+              This is when I discovered microbudget filmmaking. I learned how to write with a
+              producer&apos;s hat on, so I know I&apos;m only writing things that I can afford to
+              make myself.
+            </p>
+            <p>
+              I started A Short A Month Productions with a group of filmmakers, and we&apos;ve been
+              creating films and learning together.
+            </p>
+            <p>
+              Now I offer my services so you don&apos;t have to spend years, and you don&apos;t have
+              to make the mistakes I made along the way.
+            </p>
+            <p>
+              The best way to learn is by doing, and I can show you how to start making films, so
+              you can learn by doing, quickly.
+            </p>
+            <p>
+              Here&apos;s my <a href="#">IMDb page</a>.
+            </p>
+          </div>
+          <div className="about-intro-media">
+            <ServicePhoto
+              src="/images/about/orlando-portrait.png"
+              alt="Orlando Torres — writer, director, and producer of microbudget films"
+              variant="portrait"
+              priority
+            />
+          </div>
+        </div>
 
         <h3>My film education (with links to everything)</h3>
 
