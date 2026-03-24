@@ -47,7 +47,15 @@ export default function TestimonialsPage() {
           on your scripts.&quot;
         </p>
         <p className="testimonial-author">- Catarina C.</p>
-        <p className="image-placeholder">Picture</p>
+        <figure className="testimonial-avatar-wrap">
+          <Image
+            src="/images/testimonials/catarina-c.png"
+            alt="Catarina C."
+            width={256}
+            height={256}
+            className="testimonial-avatar"
+          />
+        </figure>
 
         <p>
           &quot;Orlando gave me valuable insights into the direction of my story as well as suggesting
