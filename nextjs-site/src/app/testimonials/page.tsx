@@ -12,7 +12,15 @@ export default function TestimonialsPage() {
           film!&quot;
         </p>
         <p className="testimonial-author">- Andre S.</p>
-        <p className="image-placeholder">Picture</p>
+        <figure className="testimonial-avatar-wrap">
+          <Image
+            src="/images/testimonials/andre-s.png"
+            alt="Andre S."
+            width={256}
+            height={256}
+            className="testimonial-avatar"
+          />
+        </figure>
 
         <p>
           &quot;I highly recommend Orlando to anyone in the film industry seeking a talented,
