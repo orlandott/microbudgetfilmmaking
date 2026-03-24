@@ -90,7 +90,15 @@ export default function TestimonialsPage() {
           Orlando.&quot;
         </p>
         <p className="testimonial-author">- Leon S.</p>
-        <p className="image-placeholder">Picture</p>
+        <figure className="testimonial-avatar-wrap">
+          <Image
+            src="/images/testimonials/leon-s.png"
+            alt="Leon S."
+            width={256}
+            height={256}
+            className="testimonial-avatar"
+          />
+        </figure>
       </section>
     </SiteShell>
   );
