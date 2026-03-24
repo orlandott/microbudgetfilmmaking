@@ -1,3 +1,4 @@
+import Link from "next/link";
 import ServicePhoto from "@/components/ServicePhoto";
 import SiteShell from "@/components/SiteShell";
 
@@ -42,31 +43,54 @@ export default function Home() {
         <p>Regardless of which step of the process you are on, I can help.</p>
       </section>
 
-      <section className="container alt">
-        <h2>Filmmaking is ready to be disrupted.</h2>
+      <section className="container home-panel-section">
+        <div className="home-callout-card" aria-labelledby="home-disrupt-heading">
+          <p className="home-panel-eyebrow">The landscape</p>
+          <h2 id="home-disrupt-heading">Filmmaking is ready to be disrupted.</h2>
+          <div className="home-panel-body">
+            <p>
+              Hollywood and film schools say that you need hundreds of thousands of dollars to make
+              a feature film. And thousands to make a short film.
+            </p>
+            <p>They want to stay in business, so they promote this myth to keep newcomers out.</p>
+            <p>
+              The truth is this: In 2025, new cameras, microphones, and lights, have made high
+              quality-productions achievable for most.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section className="container home-services-bridge">
+        <h2>Services</h2>
         <p>
-          Hollywood and film schools say that you need hundreds of thousands of dollars to make a
-          feature film. And thousands to make a short film.
+          I offer a variety of services to help with different stages of your microbudget film.
         </p>
-        <p>They want to stay in business, so they promote this myth to keep newcomers out.</p>
         <p>
-          The truth is this: In 2025, new cameras, microphones, and lights, have made high
-          quality-productions achievable for most.
+          For specific requests that don&apos;t fit into the services I offer, please{" "}
+          <Link href="/contact">contact me</Link>.
         </p>
       </section>
 
-      <section className="container alt">
-        <h2>Subscribe for updates and a free 10-minute introductory call</h2>
-        <p>I&apos;ll let you know when I&apos;m offering special discounts on my services.</p>
-        <p>I promise I won&apos;t send more than one email a month, at most.</p>
-        <p>* Indicates required field</p>
-        <form className="subscribe-form">
-          <label htmlFor="email">Email *</label>
-          <input id="email" name="email" type="email" placeholder="you@example.com" />
-          <button type="submit" className="cta-button">
-            Subscribe
-          </button>
-        </form>
+      <section className="container home-panel-section">
+        <div className="home-subscribe-card" aria-labelledby="home-subscribe-heading">
+          <p className="home-panel-eyebrow home-panel-eyebrow--muted">Stay in touch</p>
+          <h2 id="home-subscribe-heading">
+            Subscribe for updates and a free 10-minute introductory call
+          </h2>
+          <div className="home-panel-body">
+            <p>I&apos;ll let you know when I&apos;m offering special discounts on my services.</p>
+            <p>I promise I won&apos;t send more than one email a month, at most.</p>
+            <p className="home-subscribe-note">* Indicates required field</p>
+          </div>
+          <form className="subscribe-form subscribe-form--card">
+            <label htmlFor="email">Email *</label>
+            <input id="email" name="email" type="email" placeholder="you@example.com" />
+            <button type="submit" className="cta-button">
+              Subscribe
+            </button>
+          </form>
+        </div>
       </section>
     </SiteShell>
   );

@@ -398,6 +398,209 @@ body {
   background: rgba(255, 255, 255, 0.02);
 }
 
+/* Home: disruption + subscribe callouts */
+.home-panel-section {
+  padding-top: 2.5rem;
+  padding-bottom: 2.5rem;
+}
+
+.home-callout-card,
+.home-subscribe-card {
+  position: relative;
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 2.25rem 2rem 2.5rem;
+  border-radius: 14px;
+  border: 1px solid var(--line-strong);
+  background:
+    linear-gradient(165deg, rgba(22, 28, 42, 0.55) 0%, rgba(12, 14, 22, 0.92) 45%, rgba(10, 12, 18, 0.98) 100%);
+  box-shadow:
+    0 28px 80px rgba(0, 0, 0, 0.42),
+    inset 0 1px 0 rgba(255, 255, 255, 0.06);
+  overflow: hidden;
+}
+
+.home-callout-card::before,
+.home-subscribe-card::before {
+  content: "";
+  position: absolute;
+  inset: 0 0 auto 0;
+  height: 4px;
+  border-radius: 14px 14px 0 0;
+  pointer-events: none;
+}
+
+.home-callout-card::before {
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(232, 184, 74, 0.15) 20%,
+    var(--accent) 50%,
+    rgba(232, 184, 74, 0.15) 80%,
+    transparent 100%
+  );
+  box-shadow: 0 0 40px var(--accent-glow);
+}
+
+.home-subscribe-card::before {
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(61, 90, 140, 0.4) 25%,
+    rgba(100, 140, 200, 0.65) 50%,
+    rgba(61, 90, 140, 0.4) 75%,
+    transparent 100%
+  );
+  box-shadow: 0 0 36px rgba(61, 90, 140, 0.35);
+}
+
+.home-callout-card::after,
+.home-subscribe-card::after {
+  content: "";
+  position: absolute;
+  inset: auto -20% -40% -20%;
+  height: 55%;
+  background: radial-gradient(ellipse at 50% 0%, rgba(232, 184, 74, 0.06) 0%, transparent 65%);
+  pointer-events: none;
+}
+
+.home-subscribe-card::after {
+  background: radial-gradient(ellipse at 50% 0%, rgba(61, 90, 140, 0.12) 0%, transparent 62%);
+}
+
+.home-panel-eyebrow {
+  font-family: var(--font-display), system-ui, sans-serif;
+  font-size: 0.65rem;
+  letter-spacing: 0.32em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin: 0 0 0.85rem;
+  opacity: 0.95;
+}
+
+.home-panel-eyebrow--muted {
+  color: rgba(140, 170, 210, 0.9);
+}
+
+.home-callout-card h2,
+.home-subscribe-card h2 {
+  position: relative;
+  z-index: 1;
+  margin-top: 0;
+  margin-bottom: 1rem;
+  line-height: 1.25;
+}
+
+.home-panel-body {
+  position: relative;
+  z-index: 1;
+}
+
+.home-panel-body p {
+  margin-bottom: 0.85rem;
+}
+
+.home-panel-body p:last-child {
+  margin-bottom: 0;
+}
+
+.home-services-bridge {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.015) 0%, transparent 50%, rgba(255, 255, 255, 0.02) 100%);
+}
+
+.home-services-bridge h2 {
+  margin-bottom: 0.65em;
+}
+
+.home-services-bridge p {
+  margin-bottom: 1rem;
+}
+
+.home-services-bridge p:last-of-type {
+  margin-bottom: 0;
+}
+
+.home-subscribe-note {
+  font-size: 0.85rem !important;
+  color: var(--font-muted) !important;
+  margin-top: 0.25rem !important;
+}
+
+.subscribe-form--card {
+  position: relative;
+  z-index: 1;
+  margin-top: 1.75rem;
+  max-width: none;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--line);
+}
+
+.subscribe-form--card label {
+  font-size: 0.8rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  font-family: var(--font-display), system-ui, sans-serif;
+}
+
+.subscribe-form--card input {
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: rgba(7, 8, 12, 0.65);
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.subscribe-form--card input:focus {
+  outline: none;
+  border-color: rgba(100, 140, 200, 0.45);
+  box-shadow: 0 0 0 3px rgba(61, 90, 140, 0.25);
+}
+
+.subscribe-form--card .cta-button {
+  width: 100%;
+  border-radius: 8px;
+  margin-top: 0.25rem;
+}
+
+@media (min-width: 520px) {
+  .subscribe-form--card {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    grid-template-rows: auto auto;
+    gap: 0.65rem 0.85rem;
+    align-items: end;
+  }
+
+  .subscribe-form--card label {
+    grid-column: 1 / -1;
+    margin-bottom: 0;
+  }
+
+  .subscribe-form--card input {
+    margin-bottom: 0;
+    min-height: 48px;
+  }
+
+  .subscribe-form--card .cta-button {
+    width: auto;
+    min-width: 9.5rem;
+    margin-top: 0;
+    white-space: nowrap;
+  }
+}
+
+@media (min-width: 640px) {
+  .home-callout-card,
+  .home-subscribe-card {
+    padding: 2.5rem 2.5rem 2.75rem;
+  }
+}
+
 .testimonial-author {
   font-weight: 600;
   color: var(--accent);
