@@ -849,6 +849,43 @@ body {
   font-weight: 600;
 }
 
+.trailers-lede {
+  font-size: 1.05rem;
+  color: var(--font-heading);
+  margin-bottom: 1.5rem !important;
+  max-width: 42rem !important;
+}
+
+.trailers-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  margin-top: 1.25rem;
+  width: 100%;
+  max-width: min(100%, 960px);
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.trailer-embed-wrap {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border-radius: 10px;
+  overflow: hidden;
+  border: 1px solid var(--line-strong);
+  background: #000;
+  box-shadow: 0 20px 56px rgba(0, 0, 0, 0.4);
+}
+
+.trailer-embed-wrap iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
 #footer {
   background: var(--footer);
   color: var(--font-muted);
